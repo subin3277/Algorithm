@@ -1,7 +1,7 @@
 def selectionSort(a, n):
-    for i in range (0,n):
+    for i in range (1,n):
         minIndex = i
-        for j in range (i+1,n):
+        for j in range (i+1,n+1):
             if (a[j] < a[minIndex]):
                 minIndex = j
         temp = a[i]
@@ -9,8 +9,28 @@ def selectionSort(a, n):
         a[minIndex] = temp
     return a
 
-a = [3,2,5,1,4]
-n = len(a)
-res = selectionSort(a,n)
-for i in range(n):
-    print(res[i], end = ' ')
+def checkSort(a, n):
+    isSorted = True
+    for i in range(1, n):
+        if a[i] > a[i+1]:
+            isSorted = False
+        if not isSorted:
+            break
+    if isSorted:
+        print("정렬 완료")
+    else:
+        print("정렬 오류 발생")
+
+
+
+import random, time
+N = 10000
+a = []
+a.append(None)
+for i in range(N):
+    a.append(random.randint(1, N))
+start_time = time.time()
+selectionSort(a, N)
+end_time = time.time() - start_time
+print("선택 정렬의 실행 시간 (N=%d) : %0.3f"%(N, end_time))
+checkSort(a, N)
