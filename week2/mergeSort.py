@@ -4,9 +4,6 @@ def mergeSort(a,l,r):
         mergeSort(a,l,m)
         mergeSort(a,m+1,r)
         merge(a,l,m,r)
-    else :
-        return a
-    return a
 
 def merge(a,low, mid, high):
     temp = []
