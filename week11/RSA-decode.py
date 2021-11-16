@@ -20,7 +20,7 @@ def encipher(p, n, pk):
         else:
             c+=str(b)
     return c
-
+        
 def encode(p):
     m = ""
     for i in range(len(p)):
@@ -35,8 +35,8 @@ def encode(p):
             m+=str(a)
     return m
 
-def decode(p):
 
+        
 plainText = 'SAVE PRIVATE RYAN '
 N=3713
 S=97
@@ -45,3 +45,5 @@ plainMessage = encode(plainText)
 print('평문:',plainMessage)
 cipherMessage = encipher(plainMessage,N,P)
 print('암호문:', cipherMessage)
+plain = encipher(cipherMessage,N,S)
+print('복호문:',plain)
