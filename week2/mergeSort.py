@@ -47,7 +47,7 @@ def checkSort(a, n):
         print("정렬 오류 발생")
 
 
-N = 100000
+N = 5000
 a = []
 a.append(None)
 for i in range(N):
@@ -55,5 +55,5 @@ for i in range(N):
 start_time = time.time()
 mergeSort(a,1,N)
 end_time = time.time() - start_time
-print("선택 정렬의 실행 시간 (N=%d) : %0.3f"%(N, end_time))
+print("합병 정렬의 실행 시간 (N=%d) : %0.3f"%(N, end_time))
 checkSort(a, N)

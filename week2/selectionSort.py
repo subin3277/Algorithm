@@ -24,7 +24,7 @@ def checkSort(a, n):
 
 
 import random, time
-N = 10000
+N = 5000
 a = []
 a.append(None)
 for i in range(N):
